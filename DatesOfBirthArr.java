@@ -6,17 +6,19 @@ public class DatesOfBirthArr {
 	public static void main(String[] args) {
 		Random dateBirthRand = new Random();
 		for(int i = 0; i < 10; i++) {
-			dates.add(1900 + dateBirthRand.nextInt(120));
+			dates.add(dateBirthRand.nextInt(120) + 1900);
 			System.out.println(dates.get(i));
 		}
 		System.out.println("-------------------------");
-		for(int d : dates) {          
-			if(d > 2019 - 50)
+		for(int d : dates) {
+			final int datesOfBirth_50 = 1969;
+			if(d > datesOfBirth_50)
 				System.out.println(d);
 		}
 		System.out.println("-------------------------");
 		for( int i = 0; i < dates.size(); i++ ){
-			if(dates.get(i) > 2019 - 30)
+			final int datesOfBirth_30 = 1989;
+			if(dates.get(i) > datesOfBirth_30)
 				young_dates.add(dates.get(i));
 		}
 		while(young_dates.size() > 0) {
