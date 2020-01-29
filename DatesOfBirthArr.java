@@ -3,6 +3,9 @@ import java.util.Random;
 
 public class DatesOfBirthArr {
 	
+	final static int DATES_OF_BIRTH_50 = 1969;
+	final static int DATES_OF_BIRTH_30 = 1989;
+	
 	public static void main(String[] args) {
 		Random dateBirthRand = new Random();
 		for(int i = 0; i < 10; i++) {
@@ -10,15 +13,13 @@ public class DatesOfBirthArr {
 			System.out.println(dates.get(i));
 		}
 		System.out.println("-------------------------");
-		for(int d : dates) {
-			final int datesOfBirth_50 = 1969;
-			if(d > datesOfBirth_50)
+		for(Integer d : dates) {
+			if(d > DATES_OF_BIRTH_50)
 				System.out.println(d);
 		}
 		System.out.println("-------------------------");
 		for( int i = 0; i < dates.size(); i++ ){
-			final int datesOfBirth_30 = 1989;
-			if(dates.get(i) > datesOfBirth_30)
+			if(dates.get(i) > DATES_OF_BIRTH_30)
 				young_dates.add(dates.get(i));
 		}
 		while(young_dates.size() > 0) {
