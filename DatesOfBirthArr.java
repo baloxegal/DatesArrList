@@ -30,6 +30,6 @@ public class DatesOfBirthArr {
 	}
 
 	static ArrayList <Integer> dates = new ArrayList<Integer>();
-	 
+	
 	static ArrayList <Integer> young_dates = new ArrayList<Integer>();
 }
